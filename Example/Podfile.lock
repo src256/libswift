@@ -1,0 +1,16 @@
+PODS:
+  - libswift (0.1.0)
+
+DEPENDENCIES:
+  - libswift (from `../`)
+
+EXTERNAL SOURCES:
+  libswift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  libswift: 82c774094cc356863d8524dacde63c4c621e1262
+
+PODFILE CHECKSUM: 396d8c8a8e0571ef52215e560c891aac5743e313
+
+COCOAPODS: 1.1.1
