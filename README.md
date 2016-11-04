@@ -1,6 +1,6 @@
 # libswift
 
-[![CI Status](http://img.shields.io/travis/src/libswift.svg?style=flat)](https://travis-ci.org/src/libswift)
+[![CI Status](http://img.shields.io/travis/src256/libswift.svg?style=flat)](https://travis-ci.org/src256/libswift)
 [![Version](https://img.shields.io/cocoapods/v/libswift.svg?style=flat)](http://cocoapods.org/pods/libswift)
 [![License](https://img.shields.io/cocoapods/l/libswift.svg?style=flat)](http://cocoapods.org/pods/libswift)
 [![Platform](https://img.shields.io/cocoapods/p/libswift.svg?style=flat)](http://cocoapods.org/pods/libswift)
