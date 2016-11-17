@@ -13,6 +13,8 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		976B18671DDAE51C00B05FB7 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B18661DDAE51C00B05FB7 /* CellViewController.swift */; };
+		976B18771DDC347F00B05FB7 /* PartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B18761DDC347F00B05FB7 /* PartsViewController.swift */; };
 		BBD7DF5ADDBEF807392F43A4 /* Pods_libswift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3495F597D2A60873F47D628D /* Pods_libswift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		60D292E0881115F2BBC15633 /* Pods-libswift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libswift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-libswift_Example/Pods-libswift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6593AA6A89DF3213CBCE9B19 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6C61A2EF069364A7BD979FC8 /* libswift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = libswift.podspec; path = ../libswift.podspec; sourceTree = "<group>"; };
+		976B18661DDAE51C00B05FB7 /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		976B18761DDC347F00B05FB7 /* PartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsViewController.swift; sourceTree = "<group>"; };
 		B7AB37FE2A03CC8DCC0E8412 /* Pods_libswift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libswift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC8BD75D8E37AD81C3BDE83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				976B18661DDAE51C00B05FB7 /* CellViewController.swift */,
+				976B18761DDC347F00B05FB7 /* PartsViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -358,6 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976B18671DDAE51C00B05FB7 /* CellViewController.swift in Sources */,
+				976B18771DDC347F00B05FB7 /* PartsViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -499,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -514,6 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

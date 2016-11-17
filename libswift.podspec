@@ -27,13 +27,12 @@ A short description of libswift.
   s.author           = { 'src' => 'src@srcw.net' }
   s.source           = { :git => 'https://github.com/src256/libswift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '8.0'
   s.source_files = 'libswift/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'libswift' => ['libswift/Assets/*.png']
-  # }
+#  s.resources = 'libswift/Classes**/*.xib'  
+  s.resource_bundles = {
+    'libswift' => ['libswift/Classes/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
