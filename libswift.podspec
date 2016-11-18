@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libswift'
-  s.version          = '0.2.0'
+  s.version          = '0..0'
   s.summary          = 'Library for Swift Language'
 
 # This description is used to generate tags and improve search results.
@@ -29,11 +29,12 @@ A short description of libswift.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
   s.source_files = 'libswift/Classes/**/*'
-#  s.resources = 'libswift/Classes**/*.xib'  
-  s.resource_bundles = {
-    'libswift' => ['libswift/Classes/*.xib']
-  }
-
+  #  s.resources = 'libswift/Classes**/*.xib'
+  
+#  s.resource_bundles = {
+#    'libswift' => ['libswift/Classes/*.xib']
+#  }
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
