@@ -8,9 +8,9 @@
 
 import UIKit
 
+// UISwitchを内蔵したテーブルセル
 public class SwitchCell: UITableViewCell {
 
-//    @IBOutlet weak var valueSwitch: UISwitch!
     var valueSwitch: UISwitch!
     
     override public func awakeFromNib() {

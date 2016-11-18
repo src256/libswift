@@ -20,6 +20,7 @@ class CellViewController: UIViewController, UITableViewDataSource, UITableViewDe
         "SwitchCellのサンプル",
         "通常のセル",
         "TextFieldCellのサンプル",
+        "PureTextViewCellのサンプル",
         "TextViewCellのサンプル"
         ]
     
@@ -28,6 +29,7 @@ class CellViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.registerPodCell(type: SwitchCell.self)
         tableView.registerPodCell(type: TextFieldCell.self)
         tableView.registerPodCell(type: TextViewCell.self)
+        tableView.registerPodCell(type: PureTextViewCell.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,15 +40,25 @@ class CellViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return rows.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height = tableView.rowHeight
+        if indexPath.row == 3 {
+            height = 80
+        } else if indexPath.row == 4 {
+            height = 100
+        }
+        return height
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var resultCell: UITableViewCell? = nil
         if indexPath.row == 0 {
             let cell = tableView.dequeueCell(type: SwitchCell.self, indexPath: indexPath)
-            cell.configure(title: "テスト", value: true)
+            cell.configure(title: "PlaceHolder", value: true)
             resultCell = cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-            cell.textLabel?.text = "aaaa"
+            cell.textLabel?.text = "PlaceHolder"
             resultCell = cell
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueCell(type: TextFieldCell.self, indexPath: indexPath)
@@ -54,6 +66,11 @@ class CellViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.setValue("PlaceHolder")
             resultCell = cell
         } else if indexPath.row == 3 {
+            let cell = tableView.dequeueCell(type: PureTextViewCell.self, indexPath: indexPath)
+//            cell.setTitle("PlaceHolder")
+            cell.setValue("PlaceHolder")
+            resultCell = cell
+        } else if indexPath.row == 4 {
             let cell = tableView.dequeueCell(type: TextViewCell.self, indexPath: indexPath)
             cell.setTitle("PlaceHolder")
             cell.setValue("PlaceHolder")

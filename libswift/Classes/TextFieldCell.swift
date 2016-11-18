@@ -8,6 +8,7 @@
 
 import UIKit
 
+// UITextFieldを内蔵したテーブルセル。
 public class TextFieldCell: UITableViewCell {
 
     //アウトレットの宛先をCellにしないとクラッシュする
