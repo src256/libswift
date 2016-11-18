@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libswift'
-  s.version          = '0..0'
+  s.version          = '0.3.0'
   s.summary          = 'Library for Swift Language'
 
 # This description is used to generate tags and improve search results.
