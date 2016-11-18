@@ -31,9 +31,9 @@ A short description of libswift.
   s.source_files = 'libswift/Classes/**/*'
   #  s.resources = 'libswift/Classes**/*.xib'
   
-#  s.resource_bundles = {
-#    'libswift' => ['libswift/Classes/*.xib']
-#  }
+  s.resource_bundles = {
+    'libswift' => ['libswift/Classes/*.xib']
+  }
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
