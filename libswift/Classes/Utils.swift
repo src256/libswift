@@ -47,6 +47,12 @@ public extension UITableView {
     func dequeueCell<T: UITableViewCell>(type: T.Type, indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: type.className, for: indexPath) as! T
     }
+
+    func indexPathForView(view : UIView) -> IndexPath? {
+        //指定のViewに該当するIndexPathを取得する
+        let location = view.convert(CGPoint.zero, to: self)
+        return indexPathForRow(at: location)
+    }
 }
 
 public class Utils {

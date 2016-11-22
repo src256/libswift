@@ -13,7 +13,7 @@ class TestCell: UITableViewCell {
     
 }
 
-class CellViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class CellViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SwitchCellDelegate  {
     @IBOutlet weak var tableView: UITableView!
 
     fileprivate let rows = [
@@ -55,6 +55,7 @@ class CellViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if indexPath.row == 0 {
             let cell = tableView.dequeueCell(type: SwitchCell.self, indexPath: indexPath)
             cell.configure(title: "PlaceHolder", value: true)
+            cell.setValueFieldDelegate(self)
             resultCell = cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
@@ -95,5 +96,7 @@ class CellViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Pass the selected object to the new view controller.
     }
     */
-
+    func switchCellChanged(sender: UISwitch) {
+        print(sender.isOn)
+    }
 }

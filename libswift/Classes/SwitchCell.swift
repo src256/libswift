@@ -8,10 +8,16 @@
 
 import UIKit
 
+
+public protocol SwitchCellDelegate : class {
+    func switchCellChanged(sender: UISwitch)
+}
+
 // UISwitchを内蔵したテーブルセル
 public class SwitchCell: UITableViewCell {
 
     var valueSwitch: UISwitch!
+    weak var delegate: SwitchCellDelegate?
     
     override public func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +25,7 @@ public class SwitchCell: UITableViewCell {
         self.valueSwitch = UISwitch()
         valueSwitch.autoresizingMask = [
             .flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+        valueSwitch.addTarget(self, action: #selector(valueChanged(sender:)), for: .touchUpInside)
         self.accessoryView = valueSwitch
     }
 
@@ -29,5 +36,15 @@ public class SwitchCell: UITableViewCell {
     public func configure(title: String, value: Bool) {
         self.textLabel!.text = title
         self.valueSwitch.isOn = value
+    }
+    
+    public func setValueFieldDelegate(_ delegate : SwitchCellDelegate) {
+        self.delegate = delegate
+    }
+    
+    public func valueChanged(sender: UISwitch) {
+        if let delegate = delegate {
+            delegate.switchCellChanged(sender: valueSwitch)
+        }
     }
 }
