@@ -1,5 +1,5 @@
 import Foundation
 
-protocol ConfiguableCell {
+public protocol ConfiguableCell {
     func configure(value: Any)
 }
