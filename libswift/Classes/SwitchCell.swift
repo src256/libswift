@@ -42,7 +42,7 @@ public class SwitchCell: UITableViewCell {
         self.delegate = delegate
     }
     
-    public func valueChanged(sender: UISwitch) {
+    @objc public func valueChanged(sender: UISwitch) {
         if let delegate = delegate {
             delegate.switchCellChanged(sender: valueSwitch)
         }

@@ -37,7 +37,7 @@ import UIKit
     }
     
     override public func draw(_ rect: CGRect) {
-        if placeHolder.characters.count > 0 {
+        if placeHolder.count > 0 {
             placeHolderLabel.frame           = CGRect(x: 4, y: 8, width: bounds.size.width - 16, height: 0)
             placeHolderLabel.lineBreakMode   = NSLineBreakMode.byWordWrapping
             placeHolderLabel.numberOfLines   = 0
@@ -56,15 +56,15 @@ import UIKit
         super.draw(rect)
     }
     
-    func textChanged(notification: Notification?) {
+    @objc func textChanged(notification: Notification?) {
         changePlaceHolderColor()
     }
     
     private func changePlaceHolderColor() {
-        if placeHolder.characters.count == 0 {
+        if placeHolder.count == 0 {
             return
         }
-        let alpha: CGFloat = text.characters.count == 0 ? 1.0 : 0.0
+        let alpha: CGFloat = text.count == 0 ? 1.0 : 0.0
         viewWithTag(UIPlaceHolderTextView.kPlaceHolderTag)?.alpha = alpha
     }
 }
