@@ -9,7 +9,7 @@
 import UIKit
 
 
-public protocol SwitchCellDelegate : class {
+public protocol SwitchCellDelegate : AnyObject {
     func switchCellChanged(sender: UISwitch)
 }
 
@@ -21,7 +21,7 @@ public class SwitchCell: UITableViewCell {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = UITableViewCellSelectionStyle.none
+        self.selectionStyle = UITableViewCell.SelectionStyle.none
         self.valueSwitch = UISwitch()
         valueSwitch.autoresizingMask = [
             .flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]

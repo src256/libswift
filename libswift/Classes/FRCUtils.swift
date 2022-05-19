@@ -117,6 +117,8 @@ public class FRCUtils {
                     tableView.moveRow(at: indexPath, to: newIndexPath)
                 }
             }
+        @unknown default:
+            print("unknown")
         }
     }
     

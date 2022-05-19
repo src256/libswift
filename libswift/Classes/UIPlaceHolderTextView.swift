@@ -24,12 +24,12 @@ import UIKit
 
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(notification:)), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(notification:)), name: UITextView.textDidChangeNotification, object: nil)
     }
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(notification:)), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(notification:)), name: UITextView.textDidChangeNotification, object: nil)
     }
 
     deinit {
@@ -51,7 +51,7 @@ import UIKit
             placeHolderLabel.sizeToFit()
             addSubview(placeHolderLabel)
         }
-        sendSubview(toBack: placeHolderLabel)
+        sendSubviewToBack(placeHolderLabel)
         changePlaceHolderColor()
         super.draw(rect)
     }
