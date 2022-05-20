@@ -1,19 +1,16 @@
 PODS:
-  - libswift (0.2.0)
-  - Reveal-SDK (3)
+  - libswift (0.6.0)
 
 DEPENDENCIES:
   - libswift (from `../`)
-  - Reveal-SDK
 
 EXTERNAL SOURCES:
   libswift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  libswift: 22e7a5b873be031d5323fee02ac779a9c0d9f0be
-  Reveal-SDK: cad54352e23854083e3917ddf665dc0fe7781c53
+  libswift: ba81a6d7c6cbac652f6bfa7871c254fcbf089447
 
-PODFILE CHECKSUM: 7f24ba994daeeb01be2d064f100982fec9411828
+PODFILE CHECKSUM: bff59e828fdd4cc141d7a5693f4acbffcfd09c67
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.11.3

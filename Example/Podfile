@@ -1,8 +1,7 @@
 use_frameworks!
-
+platform :ios, '15.0'
 target 'libswift_Example' do
   pod 'libswift', :path => '../'
-  pod 'Reveal-SDK', :configurations => ['Debug']
   target 'libswift_Tests' do
     inherit! :search_paths
 
